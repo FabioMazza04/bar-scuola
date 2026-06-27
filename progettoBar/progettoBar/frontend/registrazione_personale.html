@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione Personale</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="registrazione-wrapper">
+        <h2>Registrazione Personale</h2>
+        <form>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" placeholder="Mario">
+            <label for="cognome">Cognome</label>
+            <input type="text" name="cognome" id="cognome" placeholder="Rossi">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="mariorossi@itcgalilei.edu.it">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Password...">
+            <label for="ruolo">Ruolo</label>
+            <select id="ruolo">
+                <option value="">Nessuna Scelta</option>
+                <option value="ata">ATA</option>
+                <option value="docente">DOCENTE</option>
+                <option value="gestore">GESTORE</option>
+            </select>
+            <button class="button" type="button" onclick="registraPersonale()">Registra</button>
+            <a href="home.html">Hai già un account? Accedi</a>
+        </form>
+    </div>
+
+    <div id="toast-container"></div>
+    <script src="index.js"></script>
+</body>
+</html>

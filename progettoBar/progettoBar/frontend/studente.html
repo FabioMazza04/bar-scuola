@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogo studente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="pagina-studente">
+    <nav>
+        <span id="nome-studente">nome</span>
+        <span id="credito-tessera">credito</span>
+        <button type="button" class="button" onclick="logout()">Logout</button>
+    </nav>
+    <div class="area-principale">
+        <h2>Catalogo prodotti</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>NOME</th>
+                    <th>DESCRIZIONE</th>
+                    <th>PREZZO</th>
+                    <th>CATEGORIA</th>
+                    <th>QUANTITA'</th>
+                    <th>AZIONI</th>
+                </tr>
+            </thead>
+            <tbody id="tabella-prodotti-studente">
+
+            </tbody>
+        </table>
+
+        <div id="sezione-ricarica">
+            <h2>Ricarica Tessera</h2>
+            <select id="importo-ricarica">
+                <option value="Nessuna Scelta">Nessuna Scelta</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+            </select>
+            <button class="button" type="button" onclick="ricaricaTessera()">Ricarica</button>
+        </div>
+    </div>
+
+    <div id="carrello">
+        <h2>Carrello</h2>
+        <ul id="lista-carrello"></ul>
+        <span id="totale-carrello">Totale: 0 €</span>
+        <button type="button" class="button" onclick="confermaOrdine()">Conferma</button>
+        <button type="button" class="button" onclick="svuotaCarrello()">Svuota</button>
+    </div>
+
+    <div id="toast-container"></div>
+    <script src="index.js"></script>
+</body>
+</html>

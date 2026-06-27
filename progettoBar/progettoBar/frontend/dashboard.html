@@ -1,0 +1,168 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <button onclick="mostraCategorie()">Categorie</button>
+        <button onclick="mostraProdotti()">Prodotti</button>
+        <button onclick="mostraOfferte()">Offerte</button>
+        <button onclick="mostraOrdini()">Ordini</button>
+    </div>
+    <div class="area-principale">
+        <section id="sezione-categorie">
+            <h2>Categorie</h2>
+            <form>
+                <div class="campo">
+                    <label for="nome-categoria">Nome Categoria</label>
+                    <input type="text" id="nome-categoria" placeholder="(panino, bevanda, dolce, ...)">
+                </div>
+                <button type="button" onclick="creaCategoria()">Aggiungi</button>
+            </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOME</th>
+                        <th>AZIONI</th>
+                    </tr>
+                </thead>
+                <tbody id="tabella-categorie">
+
+                </tbody>
+            </table>
+        </section>
+
+        <section id="sezione-prodotti">
+            <h2>Prodotti</h2>
+            <form>
+                <div class="campo">
+                    <label for="nome-prodotto">Nome prodotto</label>
+                    <input type="text" id="nome-prodotto" placeholder="(panino cotoletta, acqua, ...)">
+                </div>
+                <div class="campo">
+                    <label for="prezzo-prodotto">Prezzo</label>
+                    <input type="text" id="prezzo-prodotto" placeholder="(5€, 10€, ...)">
+                </div>
+                <div class="campo">
+                    <label for="descrizione-prodotto">Descrizione</label>
+                    <input type="text" id="descrizione-prodotto" placeholder="Descrizione...">
+                </div>
+                <div class="campo">
+                    <label for="qta-default-prodotto">Qtà Default</label>
+                    <input type="number" id="qta-default-prodotto" placeholder="0">
+                </div>
+                <div class="campo">
+                    <label for="qta-attuale-prodotto">Qtà Attuale</label>
+                    <input type="number" id="qta-attuale-prodotto" placeholder="0">
+                </div>
+                <div class="campo">
+                    <label for="categoria-prodotto">Categoria</label>
+                    <select id="categoria-prodotto">
+                        <option value="">Nessuna categoria</option>
+                    </select>
+                </div>
+                <button type="button" onclick="creaProdotto()">Aggiungi</button>
+            </form>
+            <div class="campo-ricerca">
+                <input type="text" id="ricerca-prodotto" placeholder="Cerca per nome o ID..." oninput="filtraProdotti()">
+                    <select id="filtro-categoria" onchange="filtraProdotti()">
+                    <option value="">Tutte le categorie</option>
+                </select>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOME</th>
+                        <th>PREZZO</th>
+                        <th>CATEGORIA</th>
+                        <th>QUANTITA ATTUALE</th>
+                        <th>QUANTITA DEFAULT</th>
+                        <th>AZIONI</th>
+                    </tr>
+                </thead>
+                <tbody id="tabella-prodotti">
+
+                </tbody>
+            </table>
+        </section>
+
+        <section id="sezione-offerte">
+            <h2>Offerte</h2>
+            <form>
+            <div class="campo">
+                <label for="nome-offerta">Nome Offerta</label>
+                <input type="text" id="nome-offerta" placeholder="Nome...">
+            </div>
+            <div class="campo">
+                <label for="percentuale-sconto">Sconto %</label>
+                <input type="number" id="percentuale-sconto" placeholder="(10, 20, ...)">
+            </div>
+            <div class="campo">
+                <label for="data-inizio">Inizio</label>
+                <input type="date" id="data-inizio">
+            </div>
+            <div class="campo">
+                <label for="data-fine">Fine</label>
+                <input type="date" id="data-fine">
+            </div>
+            <div class="campo">
+                <label for="tessera">Solo Tessera</label>
+                <input type="checkbox" id="tessera">
+            </div>
+            <div class="campo">
+                <label for="prodotto-offerta">Prodotto</label>
+                <select id="prodotto-offerta">
+                    <option value="">Nessun prodotto</option>
+                </select>
+            </div>
+            <button type="button" class="button" onclick="aggiungiOfferta()">Aggiungi Offerta</button>
+        </form>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>NOME</th>
+                        <th>SCONTO</th>
+                        <th>INIZIO</th>
+                        <th>FINE</th>
+                        <th>TESSERA</th>
+                        <th>PRODOTTO</th>
+                        <th>AZIONI</th>
+                    </tr>
+                </thead>
+                <tbody id="tabella-offerte">
+
+                </tbody>
+            </table>
+        </section>
+
+        <section id="sezione-ordini">
+            <h2>Ordini</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>STUDENTE</th>
+                        <th>DATA</th>
+                        <th>ORA</th>
+                        <th>TOTALE</th>
+                        <th>PRODOTTI</th>
+                        <th>STATO</th>
+                        <th>AZIONI</th>
+                    </tr>
+                </thead>
+                <tbody id="tabella-ordini">
+
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <div id="toast-container"></div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione Studenti</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="registrazione-wrapper">
+        <h2>Registrazione Studente</h2>
+        <form>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome" id="nome" placeholder="Mario">
+            <label for="cognome">Cognome</label>
+            <input type="text" name="cognome" id="cognome" placeholder="Rossi">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="mariorossi@itcgalilei.edu.it">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Password...">
+            <div class="gruppo-inline">
+                <div>
+                    <label for="classe">Classe</label>
+                    <select id="classe">
+                        <option value="Nessuna Scelta">Nessuna Scelta</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="sezione">Sezione</label>
+                    <select id="sezione">
+                        <option value="Nessuna Scelta">Nessuna Scelta</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+            </div>
+            <label for="indirizzo">Indirizzo</label>
+            <select id="indirizzo">
+                <option value="Nessuna Scelta">Nessuna Scelta</option>
+                <option value="PIT">PIT</option>
+                <option value="CAT">CAT</option>
+                <option value="CAT-LEGNO">CAT-LEGNO</option>
+                <option value="SIA">SIA</option>
+                <option value="AFM">AFM</option>
+                <option value="TUR">TUR</option>
+            </select>
+            <button class="button" type="button" onclick="registra()">Registra</button>
+            <a href="home.html">Hai già un account? Accedi</a>
+        </form>
+    </div>
+
+    <div id="toast-container"></div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Bar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login">
+        <form>
+            <h2>Bar Scuola</h2>
+            <label class="etichette" for="username">Email</label>
+            <input type="text" id="username" name="username" placeholder="Email...">
+            <label class="etichette" for="psw">Password</label>
+            <input type="password" id="psw" name="psw" placeholder="Password...">
+            <button class="button" type="button" onclick="login()">Login</button>
+        </form>
+    </div>
+    <div id="toast-container"></div>
+    <script src="index.js"></script>
+</body>
+</html>
